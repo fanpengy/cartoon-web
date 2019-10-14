@@ -1,0 +1,49 @@
+﻿/* CSS reset */
+html{color:#000;background:#FFF;font-family:Arial,'Microsoft Yahei';}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,strong{padding:0;margin:0;font-family:Arial,'Microsoft Yahei';}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+a{text-decoration:none; color:inherit; outline:none;}/*此处待添加默认链接颜色*/
+var,em,strong{font-style:normal;}
+address,caption,cite,code,dfn,em,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit; font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+body{-webkit-text-size-adjust:none;}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+/*.clearfix:after{cotent:'\200B';display: block;height: 0;clear: both;overflow: hidden;}*/
+/*.clearfix {*zoom: 1;zoom: 1}*/
+.clearfix{overflow:auto;_height:1%}
+.margin-bottom-20{margin-bottom: 20px;}
+.font12{font-size: 12px;}
+
+/* 公共 */
+* {margin: 0;padding: 0;-webkit-box-sizing: border-box;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-moz-box-sizing: border-box;-moz-tap-highlight-color: rgba(0, 0, 0, 0);box-sizing: border-box;tap-highlight-color: rgba(0, 0, 0, 0);-webkit-text-size-adjust:none;-moz-text-size-adjust:none;text-size-adjust:none;}
+
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+/*去除chrome input输入框黄色背景*/
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+a, input, select, textarea {
+    outline: none;
+}
+img {
+    max-width: 100%;
+}
+body,
+html,.container{
+    width: 100%;
+}

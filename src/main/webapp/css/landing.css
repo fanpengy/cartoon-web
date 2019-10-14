@@ -1,0 +1,205 @@
+﻿/* .bg {
+  background: url(../Images/header.png) 0 0 no-repeat;
+  background-size: 100% 2.38rem;
+} */
+.landing {
+  padding: 0 0.3rem;
+}
+.landing .header {
+  height: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.landing .header img {
+  width: 1.92rem;
+  height: 2.76rem;
+}
+.landing .header .header-time {
+  font-size: 0.5rem;
+  position: relative;
+  color: #fff;
+  margin-left: 0.26rem;
+}
+.landing .header .header-time h1 {
+  font-size: 0.34rem;
+  margin-top: 0.5rem;
+}
+.landing .header .header-time span {
+  font-size: 0.22rem;
+}
+.landing .header .header-time a {
+  color: #fff;
+  display: inline-block;
+  width: 4.81rem;
+  height: 0.69rem;
+  line-height: 0.69rem;
+  text-align: center;
+  background-color: #fc6169;
+  border-radius: 1rem;
+  font-size: 0.3rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
+}
+.landing .main {
+  height: 20rem;
+  overflow: hidden;
+  margin-top: 0.8rem;
+  text-align: left;
+}
+.landing .main .txt {
+  font-size: 0.32rem;
+  color: #444444;
+  line-height: .6rem;
+}
+.landing .main .txt .follow-up {
+  font-size: 0.35rem;
+  color: #444;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+.landing .main .txt .follow-up b {
+  color: #ff0000;
+}
+.landing .main .txt .follow-up span {
+  color: #449afb;
+}
+.landing .main .txt .follow-up img {
+  width: 5.66rem;
+  height: 6.3rem;
+  margin-top: 0.5rem;
+}
+.landing .main .txt p {
+  text-indent: 0.4rem;
+}
+.landing .main .txt .wx {
+  color: #313131;
+}
+.landing .main .txt .wx b {
+  color: #ff6101;
+}
+.landing .main .copy-btn {
+  color: #ff0000;
+}
+.landing .main .wx-btn {
+  display: block;
+  width: 4.8rem;
+  height: 0.69rem;
+  line-height: 0.69rem;
+  border: 1px solid #fc6169;
+  color: #fc6169;
+  font-size: 0.3rem;
+  text-align: center;
+  border-radius: 0.1rem;
+  margin-top: 0.24rem;
+  margin-left: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.landing .shade {
+  padding-top: 0.2rem;
+  position: relative;
+}
+.landing .shade .gradient {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  height: 0.8rem;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff));
+  background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0), #ffffff);
+}
+.landing .shade img {
+  width: 0.37rem;
+  height: 0.29rem;
+  -webkit-animation: packupArrowFlow 1s ease infinite;
+  animation: packupArrowFlow 1s ease infinite;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.18rem;
+}
+.landing .shade a {
+  display: block;
+  width: 4.8rem;
+  height: 0.69rem;
+  line-height: 0.69rem;
+  border: 1px solid #fc6169;
+  color: #fc6169;
+  font-size: 0.3rem;
+  text-align: center;
+  border-radius: 0.1rem;
+  margin-top: 0.24rem;
+  margin-left: 1.1rem;
+}
+.landing .recommend ul li:nth-child(odd) {
+  margin-right: 0.2rem;
+  
+}
+.landing .recommend ul li {
+  margin-bottom: 0.34rem;
+  position: relative;
+  float: left;
+  width: 3.35rem;
+  height: 2.96rem;
+}
+.landing .recommend ul li img {
+  width: 3.35rem;
+  height: 2.96rem;
+}
+.landing .recommend ul li .txt {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.landing .recommend ul li .txt p {
+  line-height: 0.4rem;
+  color: #fff;
+}
+.landing .recommend ul li .txt p:nth-child(1) {
+  font-size: 0.26rem;
+}
+.landing .recommend ul li .txt p:nth-child(2) {
+  font-size: 0.2rem;
+}
+.landing .line {
+  text-align: center;
+}
+.landing .line img {
+  width: 1.6rem;
+  height: 0.5rem;
+}
+.landing .leave-message ul li {
+  margin-bottom: 0.3rem;
+}
+.landing .leave-message ul li img {
+  width: 7rem;
+  height: 2.99rem;
+}
+.landing .leave-message ul li .msg p:nth-child(1) {
+  color: #2a2a2a;
+  font-size: 0.3rem;
+}
+.landing .leave-message ul li .msg p:nth-child(2) {
+  color: #727272;
+  font-size: 0.24rem;
+}
+@keyframes packupArrowFlow {
+  0%,
+  to {
+    bottom: 0;
+  }
+  70% {
+    bottom: 10px;
+  }
+}
+@-webkit-keyframes packupArrowFlow {
+  0%,
+  to {
+    bottom: 0;
+  }
+  70% {
+    bottom: 10px;
+  }
+}
