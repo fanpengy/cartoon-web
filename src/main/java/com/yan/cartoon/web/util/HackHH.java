@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.imageio.ImageIO;
 import javax.script.ScriptException;
 import java.io.*;
 import java.nio.file.Files;
@@ -165,11 +164,11 @@ public class HackHH {
             html.append(String.format(pictureLine,"/images/" + title + File.separator + pic));
         }
         if (chapterId > 0) {
-            html.append(String.format(jumpUrl,20,String.format("%s%s",title, chapterId - 1),"上一章"));
+            html.append(String.format(jumpSpanUrl, 20, String.format("%s%s", title, chapterId - 1), "上一章"));
         }
-        html.append(String.format(jumpUrl,20,String.format("%s%s",title, chapterId + 1),"下一章"));
+        html.append(String.format(jumpSpanUrl, 20, String.format("%s%s", title, chapterId + 1), "下一章"));
 
-        html.append(String.format(jumpUrl,20,title,"目录"));
+        html.append(String.format(jumpSpanUrl, 20, title, "目录"));
         html.append(htmlPostfix);
         InputStream inputStream = new ByteArrayInputStream(html.toString().getBytes());
         FileOutputStream outputStream = new FileOutputStream(String.format(directUrl,dir,title,title,chapterId));

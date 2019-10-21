@@ -85,6 +85,8 @@ public interface StringConstants {
             "         pageEncoding=\"UTF-8\"%>\n";
     String jumpUrl = "<p style=\"font-size:%spx\"> <a href=\"/api/get?page=%s\">%s</a></p>\n";
 
+    String jumpSpanUrl = "<span style=\"font-size:%spx\"> <a href=\"/api/get?page=%s\">%s</a></span>\n";
+
     String pictureLine = "            <p style=\"white-space: normal;\"><img style=\"min-height: 200px; display: inline;\" src=\"%s\"></p>\n";
 
     String BlankString = "";
