@@ -49,6 +49,8 @@ public class HackHH {
     @Autowired
     private ScriptCaller caller;
 
+    private OKHttpUtils httpUtils = new OKHttpUtils(ProxyUtils.proxySelector);
+
 
     public void update() throws IOException {
         String[] cartoons = updateList.split("\\|");
@@ -233,7 +235,7 @@ public class HackHH {
                 while (retry.size() > 0 || fail.size() == 0) {
                     if (retry.size() > 0 && (retry.size() >= 10 || fail.size() > 0)) {
                         //重试失败
-                        List<Integer> success = retry.parallelStream().map(pIndex -> {
+                        List<Integer> success = retry.stream().filter(Objects::nonNull).parallel().map(pIndex -> {
                             try {
                                 downloadPicture(String.format(picture, pIndex),
                                         dir + File.separator + String.format("%s/%s-%s.jpg",
@@ -287,7 +289,7 @@ public class HackHH {
         }
         try {
             FileOutputStream outputStream = new FileOutputStream(f);
-            InputStream inputStream = OKHttpUtils.get(urlPara,true).inputStream();
+            InputStream inputStream = httpUtils.get(urlPara).inputStream();
             byte[] buf = new byte[1024];
             int len;
             while ((len = inputStream.read(buf)) > 0) {
@@ -304,9 +306,9 @@ public class HackHH {
         }
     }
 
-    private OKHttpUtils.HttpResult postRetryWithDefaultProxys(String url, RequestBody body) {
+    private HttpResult postRetryWithDefaultProxys(String url, RequestBody body) {
         try {
-            return OKHttpUtils.post(url,body,true);
+            return httpUtils.post(url, body);
         } catch (Exception e) {
             return postRetryWithDefaultProxys(url, body);
         }

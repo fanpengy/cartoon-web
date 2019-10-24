@@ -63,8 +63,11 @@ public class HtmlParser {
         return ips;*/
     }
 
+
+    //region 这里是使用过的各种免费ip网站解析
+    //www.iphai.com
     public static List<String> parseIPHi(String source) {
-        return parseIP(source,d -> {
+        return parseIP(source, d -> {
             List<String> ips = new ArrayList<>();
             Elements trs = d.select("tr");
             for (Element tr : trs) {
@@ -78,5 +81,32 @@ public class HtmlParser {
         });
 
     }
+
+    //www.xsdaili.com
+    public static String xsdailiStep1(String html) {
+        Document doc = Jsoup.parse(html);
+        Element cont = doc.getElementsByClass("cont").get(0);
+        return cont.select("a").get(0).attr("href");
+    }
+
+    public static List<String> xsdailiStep2(String html) {
+        List<String> ips = new ArrayList<>();
+        Document doc = Jsoup.parse(html);
+        Element cont = doc.getElementsByClass("cont").get(0);
+        String[] splits = cont.text().split("#");
+        for (int i = 0; i < splits.length - 1; i++) {
+            String split = splits[i];
+            int s = split.lastIndexOf(" ");
+            int a = split.indexOf("@");
+            String type = split.substring(a + 1);
+            if (type.equals("HTTPS")) {
+                ips.add(split.substring(s + 1, a));
+            }
+        }
+
+        return ips;
+    }
+
+    //end region
 
 }
