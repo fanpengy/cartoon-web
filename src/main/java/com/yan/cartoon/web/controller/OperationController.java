@@ -19,13 +19,25 @@ public class OperationController {
     private HackHH hackHH;
 
     @RequestMapping("update")
-    public void update() throws IOException {
-        hackHH.update();
+    @ResponseBody
+    public String update() {
+        try {
+            hackHH.update();
+            return "completed";
+        } catch (IOException e) {
+            return e.getMessage();
+        }
     }
 
     @RequestMapping("finishchange")
-    public void finishChange() throws IOException {
-        hackHH.finishChange();
+    @ResponseBody
+    public String finishChange() {
+        try {
+            hackHH.finishChange();
+            return "completed";
+        } catch (IOException e) {
+            return e.getMessage();
+        }
     }
 
     @RequestMapping("proxy")
